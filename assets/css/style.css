@@ -1,0 +1,9 @@
+/* background image */
+body {
+    background-image: url("../../assets/images/background.jpeg");
+}
+/* set height and width for images */
+.crystal-image {
+    height: 100px;
+    width: 100px;
+}
