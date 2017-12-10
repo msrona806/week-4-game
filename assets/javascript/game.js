@@ -1,41 +1,34 @@
 // VARIABLES
-var targetNumber = 20;
-var counter = 0;
-var numberOptions = [10, 11];
+var targetNumber = Math.floor((Math.random() * 100) + 20); // random number generator for target score, 20-100
+var counter = 0; // counter for tracking total score
+var win = 0;
+var lose = 0;
+
+// win/lose counter
+$("#wins").text(win);
+$("#losses").text(lose);
 
 // id for crystal images
-           // var crystals = document.getElementById("pink");
-
-// code to link the targetNum and targetNumber
+          
+// link the targetNum and targetNumber
 $("#targetNum").text(targetNumber);
 
+$("#guesses").text(counter);
+
 // randon number generator for jewels
+var pink= Math.floor((Math.random() * 15) + 1);
 
-// random number generator for target score
-var increment = numberOptions[Math.round(Math.random())];
-
-// counter for wins/losses
-
-// counter for tracking total score
+//random number for each crystal
 $("#pink").on("click", function() {
-  
-  //counter increases by 1 everytime clicked
-  counter += increment;
-  alert("you new score " + counter);
+  (counter += (pink));
+  console.log(counter);
 
 // logic for comparing score to target
-if (counter === targetNumber){
-  alert("Awesomeness");
+  if (counter === targetNumber){
+  alert("Awesome, you win"); win++;
 } else if (counter >= targetNumber){ 
-  alert("You lose!!");
+  alert("You lose!!"); lose++;
 }
-
 });
-
-// on-click event to that adds numbers to the jewels
-// $("#pink").on("click", function() {
-//   alert("gotcha");
-// });
-; 
 
 
