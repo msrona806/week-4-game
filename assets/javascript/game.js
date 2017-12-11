@@ -25,37 +25,61 @@ var purple= Math.floor((Math.random() * 12) + 1);
 $("#yellow").on("click", function() {
   (counter += (yellow));
   console.log(counter, yellow); score()
+  // link the targetNum and targetNumber for showing results on html page. 
+$("#targetNum").text(targetNumber);
+
+//link counter to guesses on html page
+$("#guesses").text(counter); //*** UPDATING IN CONSOLE, BUT NOT UPDATING IN HTML ***
 });
 $("#pink").on("click", function() {
     (counter += (pink));
     console.log(counter, pink); score()
+    // link the targetNum and targetNumber for showing results on html page. 
+$("#targetNum").text(targetNumber);
+
+//link counter to guesses on html page
+$("#guesses").text(counter); //*** UPDATING IN CONSOLE, BUT NOT UPDATING IN HTML ***
 });
 $("#purple").on("click", function() {
   (counter += (purple));
   console.log(counter, purple); score()
+  // link the targetNum and targetNumber for showing results on html page. 
+$("#targetNum").text(targetNumber);
+
+//link counter to guesses on html page
+$("#guesses").text(counter); //*** UPDATING IN CONSOLE, BUT NOT UPDATING IN HTML ***
 });
 $("#green").on("click", function() {
     (counter += (green));
     console.log(counter, green); score()
+    // link the targetNum and targetNumber for showing results on html page. 
+$("#targetNum").text(targetNumber);
+
+//link counter to guesses on html page
+$("#guesses").text(counter); //*** UPDATING IN CONSOLE, BUT NOT UPDATING IN HTML ***
 });
-
-
 
 // logic for comparing score to target
 function score() { 
   if (counter === targetNumber){ 
-  alert("Awesome, you win"); win ++; 
+  alert("Awesome, you win"); win ++;
   reset();
+  // win/lose counter
+$("#wins").text(win);
+$("#losses").text(lose);
 }
   else if (counter >= targetNumber){
   lose ++; alert("You lose!!"); }
   // reset();
+  // win/lose counter
+$("#wins").text(win);
+$("#losses").text(lose);
   
 }
   console.log(lose); console.log(win); //console log to see if score is changing 
   //***NOT CHANGING***
 
-// resets game 
+// resets game ***NOT WORKING***
 function reset () {
   var targetNumber = Math.floor((Math.random() * 100 ) + 19);
   pink= Math.floor((Math.random() * 12) + 1);
@@ -67,8 +91,5 @@ function reset () {
 }
 
 // Set the inner HTML contents of #psychic div to html string
-// document.querySelector("#crystal").innerHTML = html;
 
 
-// function updates() {
-//   return counter
