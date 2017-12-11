@@ -2,12 +2,32 @@
 body {
     background-image: url("../../assets/images/background.jpeg");
 }
+.name {
+    color: purple;
+    font-weight: bold;
+    font-size: 25px;
+    background: white;
+    opacity: .25;
+
+}
+.description {
+    background: black;
+    opacity: .45;
+    color: white;
+    float: left;
+}
 /* set height and width for images */
 .crystal-image {
     height: 100px;
     width: 100px;
 }
-.box {
-    border: 2px solid white;
+.track {
     font-size: 24px;
+    background: white;
+    opacity: .25;
+}
+h4 {
+    background: white;
+    opacity: .45;
+    padding: 10px;
 }
